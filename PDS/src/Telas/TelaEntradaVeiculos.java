@@ -3,9 +3,7 @@ package Telas;
 
 import java.awt.Component;
 import java.awt.Event;
-import java.awt.FlowLayout;
 import java.awt.GridLayout;
-import java.awt.LayoutManager;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -13,16 +11,16 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
+import Codigo.ControleDataeHora;
 
-
-import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
 
-public class TelaEntradaVeiculos extends JFrame implements ActionListener{
 
+public class TelaEntradaVeiculos extends JFrame implements ActionListener{
+	ControleDataeHora controleData = new ControleDataeHora();
 	
 	JLabel labelModelo;
 	JTextField textModelo;
@@ -89,6 +87,10 @@ public class TelaEntradaVeiculos extends JFrame implements ActionListener{
 		add(botaosair);
 		textHodaSaida.setEnabled(false);
 		textValor.setEnabled(false);
+//		textHodaEntrada.setEnabled(false);
+//		textData.setEnabled(false);
+		textHodaEntrada.setText(controleData.getHoraPronta());
+		textData.setText(controleData.getDataPronta());
 
 	}
 		public void eventos(){
@@ -116,6 +118,7 @@ public class TelaEntradaVeiculos extends JFrame implements ActionListener{
 			textHodaEntrada.setText("");
 			textHodaSaida.setText("");
 			textValor.setText("");
+			textData.setText("");
 			
 
 				}		
