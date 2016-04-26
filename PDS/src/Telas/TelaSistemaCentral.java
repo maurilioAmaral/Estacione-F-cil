@@ -23,7 +23,8 @@ public class TelaSistemaCentral extends JFrame implements ActionListener{
 	JButton botaosair;
 	JLabel labelEntradaVeiculos;
 	JLabel labelListagemVeiculos;
-	JLabel labelRemoverVeiculos;
+	JLabel labelRemoverVeiculos; 
+	
 	
 	
 	public TelaSistemaCentral(){
@@ -105,6 +106,10 @@ public class TelaSistemaCentral extends JFrame implements ActionListener{
 	}
 	public void setListagemCarro(JButton listagemCarro) {
 		this.listagemCarro = listagemCarro;
+	}
+	@Override
+	public String toString() {
+		return "TelaSistemaCentral [entradaCarro=" + entradaCarro + "]";
 	}
 
 }
