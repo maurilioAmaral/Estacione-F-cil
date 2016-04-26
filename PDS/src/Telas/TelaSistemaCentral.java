@@ -1,5 +1,6 @@
 package Telas;
 
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
@@ -15,7 +16,7 @@ import sun.font.TextLabel;
 
 public class TelaSistemaCentral extends JFrame implements ActionListener{
 
-	JComboBox<String> combo = new JComboBox<String>();
+
 	JButton entradaCarro;
 	JButton saidaCarro;
 	JButton listagemCarro;
@@ -32,24 +33,21 @@ public class TelaSistemaCentral extends JFrame implements ActionListener{
 	}
 	public void tela(){
 		setLayout(new GridLayout(4,2));
-//		setLayout(new FlowLayout());
-		setSize(400,250);
+
+		setSize(600,250);
 		setVisible(true);
 		setLocationRelativeTo(null);
 		
 				
 	}
 	public void botoes(){
-		entradaCarro = new JButton("Entrada ");
+		entradaCarro = new JButton("Entrada");
 		saidaCarro = new JButton("Saida");
 		listagemCarro = new JButton("Listagem");
 		botaosair = new JButton("Sair");
 		labelEntradaVeiculos = new JLabel("Entrada de Veículos");
 		labelRemoverVeiculos = new JLabel("Saída de Veículos");
 		labelListagemVeiculos = new JLabel("Listagem de Veículos");
-//		add(combo);
-//		combo.addItem("cliente");
-//		combo.addItem("funcionario");
 		add(labelEntradaVeiculos);
 		add(entradaCarro);
 		add(labelRemoverVeiculos);
