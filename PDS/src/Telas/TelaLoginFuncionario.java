@@ -10,33 +10,38 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-import Codigo.ArrayXml;
-import Codigo.Funcionario;
+import Codigo.ControleFuncionario;
+import ConexaoBancoDados.ConexaoBD;
+
+
 
 public class TelaLoginFuncionario extends JFrame implements ActionListener{
+	ControleFuncionario func = new ControleFuncionario();
+	ConexaoBD conect = new ConexaoBD();
 	
 	JButton botaoCadastrar;
 	JButton botaoCancelar;
-	JLabel labelNome;
+	JLabel labelSenha;
 	JLabel labelLogin;
-	JTextField textNome;
+	JTextField textSenha;
 	JTextField textLogin;
 	public TelaLoginFuncionario(){
 	tela();
 	botoes();
 	eventos();
+	conect.conectar();
 		
 		
 	}
 	public void botoes(){
 		botaoCadastrar = new JButton("Cadastrar");
 		botaoCancelar = new JButton("Cancelar");
-		labelNome = new JLabel("Nome");
+		labelSenha = new JLabel("Nome");
 		labelLogin = new JLabel("Login");
-		textNome = new JTextField(15);
+		textSenha = new JTextField(15);
 		textLogin = new JTextField(15);
-		add(labelNome);
-		add(textNome);
+		add(labelSenha);
+		add(textSenha);
 		add(labelLogin);		
 		add(textLogin);
 		add(botaoCancelar);			
@@ -54,8 +59,9 @@ public class TelaLoginFuncionario extends JFrame implements ActionListener{
 		
 		public void actionPerformed(ActionEvent e) {
 			if(e.getSource() == botaoCadastrar){
-					
-				
+					String login = textLogin.getText();
+					String senha  = textSenha.getText();
+				func.InserirDadosFuncionario(login, senha);
 			}
 			
 		}
@@ -64,7 +70,7 @@ public class TelaLoginFuncionario extends JFrame implements ActionListener{
 		
 		public void actionPerformed(ActionEvent e) {
 			if(e.getSource() == botaoCancelar){
-			textNome.setText("");
+			textSenha.setText("");
 			textLogin.setText("");
 			}
 			
@@ -76,6 +82,9 @@ public class TelaLoginFuncionario extends JFrame implements ActionListener{
 	
 	
 		
+	}
+	public static void main(String[] args) {
+		new TelaLoginFuncionario();
 	}
 	
 
