@@ -87,6 +87,8 @@ public class TelaEntradaVeiculos extends JFrame implements ActionListener{
 		add(textValor);
 		add(botaocadastrar);
 		add(botaosair);
+		textHodaSaida.setEnabled(false);
+		textValor.setEnabled(false);
 
 	}
 		public void eventos(){
@@ -228,5 +230,8 @@ public class TelaEntradaVeiculos extends JFrame implements ActionListener{
 	}
 	public void setTextData(JTextField textData) {
 		this.textData = textData;
+	}
+	public static void main(String[] args) {
+		new TelaEntradaVeiculos();
 	}
 }

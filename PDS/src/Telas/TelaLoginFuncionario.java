@@ -14,8 +14,7 @@ import Codigo.ArrayXml;
 import Codigo.Funcionario;
 
 public class TelaLoginFuncionario extends JFrame implements ActionListener{
-	ArrayXml arrayFuncionario = new ArrayXml();
-	Funcionario func = new Funcionario();
+	
 	JButton botaoCadastrar;
 	JButton botaoCancelar;
 	JLabel labelNome;
@@ -55,11 +54,7 @@ public class TelaLoginFuncionario extends JFrame implements ActionListener{
 		
 		public void actionPerformed(ActionEvent e) {
 			if(e.getSource() == botaoCadastrar){
-				func.setNome(textNome.getText());
-				func.setLogin(textLogin.getText());
-				arrayFuncionario.meuXmlFuncionario.add(func);
-				JOptionPane.showMessageDialog(null, "funcionario cadastrado com sucesso\n"
-				+"nome: "+arrayFuncionario.meuXmlFuncionario.get(0).getNome());		
+					
 				
 			}
 			
