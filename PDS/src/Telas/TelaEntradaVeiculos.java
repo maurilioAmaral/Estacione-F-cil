@@ -11,7 +11,9 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
+import Codigo.ControleCarro;
 import Codigo.ControleDataeHora;
+import ConexaoBancoDados.ConexaoBD;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -21,6 +23,8 @@ import java.awt.event.ActionListener;
 
 public class TelaEntradaVeiculos extends JFrame implements ActionListener{
 	ControleDataeHora controleData = new ControleDataeHora();
+	ConexaoBD conexao = new ConexaoBD();
+	ControleCarro carroControl = new ControleCarro();
 	
 	JLabel labelModelo;
 	JTextField textModelo;
@@ -42,6 +46,7 @@ public class TelaEntradaVeiculos extends JFrame implements ActionListener{
 		ajusteTela();
 		botoes();
 		eventos();
+		conexao.conectar();
 		
 	}
 	public void ajusteTela(){
@@ -234,7 +239,7 @@ public class TelaEntradaVeiculos extends JFrame implements ActionListener{
 	public void setTextData(JTextField textData) {
 		this.textData = textData;
 	}
-	public static void main(String[] args) {
-		new TelaEntradaVeiculos();
-	}
+//	public static void main(String[] args) {
+//		new TelaEntradaVeiculos();
+//	}
 }
