@@ -27,8 +27,10 @@ public class TelaLoginFuncionario extends JFrame implements ActionListener{
 	public PreparedStatement pst = null;
 	public ResultSet rs=null;
 	
-	JButton botaoEntrar;
+	
+	
 	JButton botaoCancelar;	
+	JButton botaoEntrar;
 	JLabel labelSenha;
 	JLabel labelLogin;
 	JTextField textSenha;
