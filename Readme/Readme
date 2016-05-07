@@ -1,0 +1,22 @@
+Sistema estacionamento.
+
+Extraia o projeto (sistema estacionamento - master"src"), contendo os pacotes código, view e conexão importe o diterório para o eclipse.
+Para realizar a conexão com o banco de dados Mysql, clique com o auxiliar sobre o projeto vá em :Build path-> Configure Build path-> Add External JARs e adicione mysql-connector-java-5.0.8 que pode ser baixado no site do MySQL, apos baixar extraia e adicione a pasta do projeto.
+Será preciso instalar o banco de dados MySQL, além do MySQL Worckbench e criar duas tabelas, são elas : veículo e funcionario.
+
+TABELA FUNCIONARIO:
+
+funcionario(
+login varchar(10),
+senha varchar(10)
+)
+veículo(
+id int auto_increment not null,
+modelo varchar(15),
+placa varchar(15),
+horaEntrada varchar(10),
+horaSaida varchar(10)
+id primary_key
+)
+ Adicione login e senha desejados na tabela funcionario e execute o sistema.
+ 
