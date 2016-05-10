@@ -112,18 +112,11 @@ public class TelaEntradaVeiculos extends JFrame implements ActionListener{
 		if(e.getSource() == botaocadastrar){
 			String modelo = textModelo.getText();
 			String placa = textPlaca.getText();		
-//			Double valorPagar = null;
-//			if(textValor != null && !textValor.getText().isEmpty()){
-//				valorPagar = Double.parseDouble(textValor.getText());
-//			}
-//			double valorPagar = textValor.getText();			
-//			String horaEntrada = dataHora.getHoraEntrada();
-//			String horaSaida = dataHora.getDataEntrada();
 			carroControl.InserirDadosCarro(modelo, placa,dataHora);			
 			textModelo.setText("");					
 			textPlaca.setText("");		
 			
-//			
+		
 
 				}		
 			}
@@ -214,7 +207,5 @@ public class TelaEntradaVeiculos extends JFrame implements ActionListener{
 	public void setTextData(JTextField textData) {
 		this.textData = textData;
 	}
-//	public static void main(String[] args) {
-//		new TelaEntradaVeiculos();
-//	}
+
 }
