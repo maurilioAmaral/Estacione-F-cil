@@ -13,9 +13,8 @@ import javax.swing.JOptionPane;
 public class ConexaoBD {
 	
 	 public Connection connect;
-	 public Statement state;
 	 public ResultSet res;
-	
+	 public Statement state;
 
 	
 	public Connection conectar(){
