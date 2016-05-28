@@ -10,6 +10,7 @@ public class ControleDataeHora {
 	  SimpleDateFormat horaFormatada = new SimpleDateFormat("hh:mm");
 	  String dataEntrada =  dataFormatada.format(data);		  
 	  String horaEntrada= horaFormatada.format(data);
+	 
 	public String getDataEntrada() {
 		return dataEntrada;
 	}
@@ -22,4 +23,5 @@ public class ControleDataeHora {
 	public void setHoraEntrada(String horaEntrada) {
 		this.horaEntrada = horaEntrada;
 	}
+	
 }
