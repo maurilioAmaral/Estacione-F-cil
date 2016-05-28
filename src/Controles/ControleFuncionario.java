@@ -14,15 +14,13 @@ import ConexaoBancoDados.ConexaoBD;
 
 public class ControleFuncionario {
 	ConexaoBD conectado = new ConexaoBD();
-	public Connection connect=null;
-	public PreparedStatement pst = null;
+	public Connection connect=null;	
 	public ResultSet rs=null;
-
+	public PreparedStatement pst = null;
 
 
 	public void InserirDadosFuncionario(String login,String senha ){
 		
-//		ConexaoBD conectado = new ConexaoBD();
 		conectado.conectar();		
 		try{
 			Connection conn = (Connection) conectado.conectar();

@@ -104,7 +104,7 @@ public class TelaSistemaCentral extends JFrame implements ActionListener{
 			public void actionPerformed(ActionEvent e) {
 				if(e.getSource() == botaoBuscar);
 				TelaBuscaVeiculos telabusca = new TelaBuscaVeiculos();
-				telabusca.pesquisar();
+				
 				
 			}
 		});
@@ -132,7 +132,5 @@ public class TelaSistemaCentral extends JFrame implements ActionListener{
 	public void setListagemCarro(JButton listagemCarro) {
 		this.listagemCarro = listagemCarro;
 	}
-//	public static void main(String[] args) {
-//		new TelaSistemaCentral();
-//	}
+
 }

@@ -112,7 +112,7 @@ public class TelaEntradaVeiculos extends JFrame implements ActionListener{
 		if(e.getSource() == botaocadastrar){
 			String modelo = textModelo.getText();
 			String placa = textPlaca.getText();		
-			carroControl.InserirDadosCarro(modelo, placa,dataHora);			
+//			carroControl.InserirDadosCarro(modelo, placa,dataHora);			
 			textModelo.setText("");					
 			textPlaca.setText("");		
 			

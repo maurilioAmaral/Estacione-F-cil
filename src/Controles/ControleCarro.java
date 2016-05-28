@@ -17,22 +17,23 @@ import ConexaoBancoDados.ConexaoBD;
 	
 	public class ControleCarro {
 		ControleDataeHora dataHora = new ControleDataeHora();		
-		public void InserirDadosCarro(String modelo,String placa,ControleDataeHora dataHora){
+		public void InserirDadosCarro(String modelo,String placa,ControleDataeHora dataHora,String propietario){
 			
 			ConexaoBD conectado = new ConexaoBD();
 			conectado.conectar();
 			try{
 				Connection conn = (Connection) conectado.conectar();
 				Statement state = (Statement) conn.createStatement();
-				String mySql = "INSERT INTO estacionamento.veiculo (modelo, placa,horaEntrada,dataEntrada) VALUES ('"+modelo+"','"+placa+"','"+dataHora.getHoraEntrada()+"','"+dataHora.getDataEntrada()+"')";
+				String mySql = "INSERT INTO estacionamento.veiculo (modelo, placa,horaEntrada,dataEntrada,propietario) VALUES ('"+modelo+"','"+placa+"','"+dataHora.getHoraEntrada()+"','"+dataHora.getDataEntrada()+"','"+propietario+"')";
 				System.out.println(mySql);
 				boolean res = state.execute(mySql);
-				JOptionPane.showMessageDialog(null,(!res)?"dados inseridos com sucesso!!!":"");
+				JOptionPane.showMessageDialog(null,(!res)?"Veículo inserido com sucesso!!!":"");
 				state.close();
 				conectado.fecharBancoDados();
 			}catch(Exception e){
 				JOptionPane.showMessageDialog(null,e.getMessage());				
 				conectado.fecharBancoDados();
+				
 			}
 			
 		}
@@ -44,7 +45,7 @@ import ConexaoBancoDados.ConexaoBD;
 			Statement state = (Statement) conn.createStatement();
 			String mySql = "DELETE FROM estacionamento.veiculo WHERE placa = '"+placa+"';";
 			boolean res = state.execute(mySql);
-			JOptionPane.showMessageDialog(null,(!res)?"dados excluidos com sucesso!!!":"");
+			JOptionPane.showMessageDialog(null,(!res)?"Veículo removido com sucesso!!!":"");
 			state.close();
 			conectado.fecharBancoDados();
 			

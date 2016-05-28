@@ -42,9 +42,9 @@ public class TelaBuscaVeiculos extends JFrame implements ActionListener{
 	}
 	public void ajusteTelaCadastro(){
 		setSize(500,200);
-	    setVisible(true);
-		setLayout(new GridLayout(5,2));
+	    setVisible(true);		
 		setTitle("busca de veículo");
+		setLayout(new GridLayout(5,2));
 		setLocationRelativeTo(null);
 		
 	}
@@ -57,6 +57,7 @@ public class TelaBuscaVeiculos extends JFrame implements ActionListener{
 		texPlaca2 = new JTextField(15);	
 		textHora = new JTextField(15);
 		textModelo = new JTextField(15);
+//		textPropietario = new JTextField(15);
 		botaocancelar = new JButton("cancelar");
 		botaoBuscar = new JButton("buscar");
 		add(labelPlaca);
@@ -163,6 +164,7 @@ public class TelaBuscaVeiculos extends JFrame implements ActionListener{
 				texPlaca2.setText(rs.getString("placa"));
 				textModelo.setText(rs.getString("modelo"));
 				textHora.setText(rs.getString("horaEntrada"));
+				
 				
 			
 			}
