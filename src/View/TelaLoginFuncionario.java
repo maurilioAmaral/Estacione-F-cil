@@ -148,7 +148,7 @@ public class TelaLoginFuncionario extends JFrame implements ActionListener{
 	public void setTextLogin(JTextField textLogin) {
 		this.textLogin = textLogin;
 	}
-	public static void main(String[] args) {
-		new TelaLoginFuncionario();
-	}
+//	public static void main(String[] args) {
+//		new TelaLoginFuncionario();
+//	}
 }
