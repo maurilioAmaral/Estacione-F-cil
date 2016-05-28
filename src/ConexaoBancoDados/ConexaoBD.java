@@ -45,6 +45,7 @@ public class ConexaoBD {
 		catch(Exception e){
 			System.out.println("erro ao fechar o banco "+ e.getMessage());
 			
+			
 		}
 	}
 	
